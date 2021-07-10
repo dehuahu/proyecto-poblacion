@@ -5,134 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Población Castilla y León</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 100px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            font-family: 'Quattrocento', serif;
-            font-weight: bold;
-
-        }
-
-        h2 {
-            font-family: 'Quattrocento', serif;
-            font-weight: bold;
-
-        }
-
-        .hello {
-            color: red;
-        }
-
-        .title {
-            color: rgb(26, 32, 121);
-        }
-
-        .section1 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .conjunto {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .conjunto1 {
-            display: flex;
-            flex-direction: column;
-            width: 33%;
-            justify-content: center;
-        }
-
-        .section2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            width: 100%;
-        }
 
 
-        .paragraph {
-            font-size: large;
-            text-align: justify;
-            margin-right: 50px;
-            font-family: 'Quattrocento', serif;
-        }
-
-        .poblacion-list {
-            font-size: large;
-            text-align: justify;
-            margin-right: 50px;
-            font-family: 'Quattrocento', serif;
-        }
-
-        .nav-items {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-        }
-
-        .nav-items li {
-            margin: 0 10px;
-            font-size: large;
-        }
-
-        .section-title {
-            font-family: 'Quattrocento', serif;
-            font-weight: bold;
-        }
-
-        .section-title-unico {
-            font-family: 'Quattrocento', serif;
-            font-weight: bold;
-            font-size: 1.17em;
-        }
-
-        .iframe {
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header id="totop">
+        <nav class="main-nav">
             <ul class="nav-items">
                 <li><a href="#poblacion">POBLACIÓN</a></li>
                 <li><a href="#factores">FACTORES QUE INFLUYEN EN LA POBLACIÓN</a></li>
                 <li><a href="#mercado-laboral">MERCADO LABORAL Y OTRAS VARIABLES</a></li>
                 <li><a href="#prediccion">PREDICCIÓN DE LA POBLACIÓN</a></li>
             </ul>
+
+            <div class="nav-top">
+                <a href="#totop">IR AL INICIO</a>
+            </div>
         </nav>
 
 
@@ -143,7 +37,7 @@
     </header>
     <main>
 
-        <h1>ÁNALISIS DE LA POBLACIÓN EN CASTILLA Y LEÓN</h1>
+        <h1>ÁNALISIS DE LA POBLACIÓN DE CASTILLA Y LEÓN</h1>
         <div>
             <p class="section-title-unico">Instrucciones para interactuar con las imágenes</p>
             <p class="paragraph">La mayoría de las imágenes son interactivas, por consiguiente, puedes ver los datos o
@@ -154,7 +48,8 @@
                 cada línea es una provincia podemos quitar la línea de la provincia pinchando en el nombre de la
                 provincia. Al hacer eso la gráfica se modificará. Si queremos recuperar la línea deberemos volver a
                 hacer click sobre el nombre de la provincia. Otras funciones son el zoom in y el zoom out para hacer
-                zoom en la gráfica. Si queremos descargar la imágen también es posible mediante el icono de download
+                zoom en la gráfica, si quisieramos volver a la gráfica original pinchamos en el icono de reset axes. Si
+                queremos descargar la imágen también es posible mediante el icono de download
                 plot as png. Si quisieramos comparar todas las líneas en un año concreto usamos el icono en compare data
                 on hover. Para desactivar esta opción debemos pinchar en show closest data on hover. Los iconos se
                 muestran en la esquina derecha de la imágen, para acceder a la barra de iconos mantén el ratón encima de
@@ -206,7 +101,7 @@
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población de Castilla y León desde 1986 hasta 2020</h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población desde 1986 hasta 2020:</b> La población
                         en Castilla y León
@@ -216,12 +111,15 @@
                         población se encuentra en sus mínimos, desde 2009-2010 la caída en la población ha sido
                         drástrica. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-total.netlify.app/" title="poblacion total" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-total.netlify.app/" title="poblacion total"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias desde 1986 hasta 2020</h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población por provincias desde 1986 hasta 2020:
                         </b> Aunque en general la tendecia de la población de Castilla y León es negativa, no todas las
@@ -231,12 +129,15 @@
                         aunque en una menor proporción son Zamora, Salamanca y Ávila. Mientras que el resto se han
                         mantenido bastante estables con pequeñas variaciones.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-provincias.netlify.app/" title="poblacion provincias"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+                    <iframe class="iframe" src="https://poblacion-provincias.netlify.app/" title="poblacion provincias"
+                        width="1000" height="500"></iframe>
+
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 0 a 4 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 0-4 por provincias desde 1996
@@ -244,12 +145,15 @@
                         </b> Para este rango de edad observamos un patrón común, una bajada de la población con este
                         rango de edad hasta 2002, subida paulatina hasta 2010 y otra bajada.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-0-4.netlify.app/" title="poblacion 0-4" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-0-4.netlify.app/" title="poblacion 0-4" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 5 a 9 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 5-9 por provincias desde 1996
@@ -260,12 +164,15 @@
                         a reducirse ligeramente en el 2018. El año de fluctuación puede variar según la provincia.
                     </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-5-9.netlify.app/" title="poblacion 5-9" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-5-9.netlify.app/" title="poblacion 5-9" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 10 a 14 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 10-14 por provincias desde 1996
@@ -275,12 +182,15 @@
                         volvió a aumentar ligeramente la población en este rango a partir de 2001. En ninguna de las
                         tres provincias se volvió a alcanzar los niveles de 1996. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-10-14.netlify.app/" title="poblacion 10-14" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-10-14.netlify.app/" title="poblacion 10-14"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 15 a 19 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 15-19 por provincias desde 1996
@@ -288,24 +198,30 @@
                         </b> Caída de la población y estancamiento estos últimos años. Unicamente en Valladolid se
                         observa una ligera subida a partir de 2015. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-15-19.netlify.app/" title="poblacion 15-19" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-15-19.netlify.app/" title="poblacion 15-19"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 20 a 24 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 20-24 por provincias desde 1996
                             hasta 2020:
                         </b> Caída de la población de entre 20 hasta 24 años y en mayor medida en las más pobladas.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-20-24.netlify.app/" title="poblacion 20-24" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-20-24.netlify.app/" title="poblacion 20-24"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 25 a 29 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 25-29 por provincias desde 1996
@@ -316,12 +232,15 @@
                         esa fecha. En 2020, la población de entre 25 hasta 29
                         estaban en sus mínimos.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-25-29.netlify.app/" title="poblacion 25-29" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-25-29.netlify.app/" title="poblacion 25-29"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 30 a 34 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 30-34 por provincias desde 1996
@@ -332,12 +251,15 @@
                         rango de edad de la población se encuentra en sus mínimos.
                     </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-30-34.netlify.app/" title="poblacion 30-34" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-30-34.netlify.app/" title="poblacion 30-34"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 35 a 39 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 35-39 por provincias desde 1996
@@ -346,12 +268,15 @@
                         Valladolid, Segovia y Burgos crecen su población hasta 2012 donde empieza a decrecer. En
                         Salamanca y Soria aumentan la población hasta 2004 y 2001 para posteriormente disminuir. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-35-39.netlify.app/" title="poblacion 35-39" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-35-39.netlify.app/" title="poblacion 35-39"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 40 a 44 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 40-44 por provincias desde 1996
@@ -361,12 +286,15 @@
                         constante. En el resto de provincias aumenta hasta 2008 y a partir de ahi se produce una bajada.
                     </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-40-44.netlify.app/" title="poblacion 40-44" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-40-44.netlify.app/" title="poblacion 40-44"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 45 a 49 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 45-49 por provincias desde 1996
@@ -375,12 +303,15 @@
                         única provincia donde se percibe un incremento constante de la población de entre 45 y 49 es en
                         Valladolid. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-45-49.netlify.app/" title="poblacion 45-49" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-45-49.netlify.app/" title="poblacion 45-49"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 50 a 54 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 50-54 por provincias desde 1996
@@ -392,11 +323,14 @@
                         provincias se han mantenido con pequeñas variaciones y en Valladolid ha
                         aumentado de manera initerrumpida. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-50-54.netlify.app/" title="poblacion 50-54" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-50-54.netlify.app/" title="poblacion 50-54"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 55 a 59 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 55-59 por provincias desde 1996
@@ -405,11 +339,14 @@
                         todas las provincias. Siendo las provincias más pobladas las que más han aumentado durante el
                         tiempo. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-55-59.netlify.app/" title="poblacion 55-59" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-55-59.netlify.app/" title="poblacion 55-59"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 60 a 64 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 60-64 por provincias desde 1996
@@ -417,11 +354,14 @@
                         </b> Descenso de la población de entre 60 hasta 64 años hasta 2002. A partir de 2002 se observa
                         como en tdos las provincias auentan la población de este rango de edad. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-60-64.netlify.app/" title="poblacion 60-64" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-60-64.netlify.app/" title="poblacion 60-64"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 65 a 69 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 65-69 por provincias desde 1996
@@ -432,11 +372,14 @@
                         recuperan o mejoran la población de entre 65 y 69 años previa a la disminución de 2002 son
                         Valladolid y Burgos. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-65-69.netlify.app/" title="poblacion 65-69" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-65-69.netlify.app/" title="poblacion 65-69"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 70 a 74 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 70-74 por provincias desde 1996
@@ -446,11 +389,14 @@
                         recupera el número de individuos de entre 70 y 74 es Valladolid donde en
                         2015 ya ha superado la población previa la disminución de 2008. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-70-74.netlify.app/" title="poblacion 70-74" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-70-74.netlify.app/" title="poblacion 70-74"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 75 a 79 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 75-79 por provincias desde 1996
@@ -460,11 +406,14 @@
                         Valladolid, la caída no se produce hasta 2012 pero rapidamente vuelve a aumentar a parir de
                         2017. </p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-75-79.netlify.app/" title="poblacion 75-79" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-75-79.netlify.app/" title="poblacion 75-79"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias por rango de 80 a 84 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de edad 80-84 por provincias desde 1996
@@ -474,12 +423,15 @@
                         aumento de la población de insuficiente para retornar a la población previa a la bajada excepto
                         Valladolid.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-80-84.netlify.app/" title="poblacion 80-84" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-80-84.netlify.app/" title="poblacion 80-84"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Población por provincias de más de 85 años desde 1996 hasta 2020
                     </h3>
                     <p class="paragraph"><b>Gráfico de líneas con la población de más de 85 años por provincias desde
@@ -488,12 +440,15 @@
                         </b> Incremento de la población de más de 85 años hasta 2017, año que destaca por las bajadas en
                         todas las provincias de Castilla y León.</p>
                 </div>
-                <iframe class="iframe" src="https://poblacion-mas85.netlify.app/" title="poblacion mas de 85"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://poblacion-mas85.netlify.app/" title="poblacion mas de 85"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 100%">
+                <div class="block__width--100">
 
                     <p class="paragraph"><b>A grandes rasgos observamos los siguientes puntos:
                         </b>
@@ -537,7 +492,7 @@
                 </div>
 
                 <img src="https://drive.google.com/uc?id=1aGqZGEM7_Tg6h1rtg3ObqNcYmxQ9x5Oo"
-                    alt="Gráfico de factores directos que influyen en la población.">
+                    alt="Gráfico de factores directos que influyen en la población." width="100%" height="auto">
             </section>
 
             <section class="section2">
@@ -592,7 +547,7 @@
 
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Número de nacimientos y defunciones en Castilla y León desde 1980 hasta
                         2019
                     </h3>
@@ -602,12 +557,15 @@
                         provoca que el resultado entre nacimientos menos defunciones caíga provocando una disminución en
                         el crecimiento de la población. </p>
                 </div>
-                <iframe class="iframe" src="https://nac-def-total.netlify.app/" title="nac-def-total" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://nac-def-total.netlify.app/" title="nac-def-total" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3>Inmigración por procedencia desde 1990 hasta 2019</h3>
                     <p class="paragraph"><b>Gráfica de barras con la evolución por tipo de inmigración de Castilla y
                             León desde 1990 hasta 2019:</b> Una gran parte de la inmigración proviene de la misma
@@ -621,12 +579,15 @@
                         crisis de 2008 para despues reducirse ligeramente para nacionales y bruscamente para
                         extranjeros. Aún asi a partir de 2016 vuelve a aumentar los flujos inmigratorios.</p>
                 </div>
-                <img src="https://drive.google.com/uc?id=15GSKebwKVUSOcLKVMBMNDHcUbqzPXDZJ"
-                    alt="Gráfico de la inmigración total por procedencia desde 1990 hasta 2019.">
+                <div class="image-resize">
+
+                    <img src="https://drive.google.com/uc?id=15GSKebwKVUSOcLKVMBMNDHcUbqzPXDZJ"
+                        alt="Gráfico de la inmigración total por procedencia desde 1990 hasta 2019." width="100%">
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Inmigración por provincias desde 1990 hasta
                         2019
                     </h3>
@@ -636,12 +597,15 @@
                         tendencia alcista hasta la crisis de 2008 para posteriormente disminuir y aumentar a partir de
                         2015. </p>
                 </div>
-                <iframe class="iframe" src="https://inm-por-provincias.netlify.app/" title="inm-por-provincias"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://inm-por-provincias.netlify.app/" title="inm-por-provincias"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Inmigración Total en Castilla Y León desde 1990 hasta
                         2019
                     </h3>
@@ -650,12 +614,15 @@
                         2008 donde ha llegado a su máximo para posteriormente disminuir sin alcanzar los valores minimos
                         del periodo analizado y aumentar a partir de 2015. </p>
                 </div>
-                <iframe class="iframe" src="https://inm-total.netlify.app/" title="inm-total" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://inm-total.netlify.app/" title="inm-total" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Inmigración por continentes desde 2005 hasta
                         2019
                     </h3>
@@ -669,12 +636,15 @@
                         América son los que sobrepasan su máximo de esta serie temporal en 2019.
                     </p>
                 </div>
-                <iframe class="iframe" src="https://inm-por-continente.netlify.app/" title="inm-por-continente"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://inm-por-continente.netlify.app/" title="inm-por-continente"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Inmigración procedente de otras comunidades desde 2005 hasta
                         2019
                     </h3>
@@ -691,8 +661,11 @@
                         2015. El resto de comunidades tienen una presencia inferior a los 2000 inmigrantes anuales, la
                         mayoria de estos presentan una tendencia ligeramente negativa o un suave estancamiento. </p>
                 </div>
-                <iframe class="iframe" src="https://imm-otra-comunidad.netlify.app/" title="inm-otra-comunidad"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://imm-otra-comunidad.netlify.app/" title="inm-otra-comunidad"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section2">
@@ -727,7 +700,7 @@
             </section>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3>Gráficos de la Inmigración por destino y rango de edades desde 2005 hasta 2019</h3>
                     <p class="paragraph">En la mayoria de las gráficas de la inmigración por provincia de destino y
                         rango de edad se puede observar como el rango de edad que más emigra a Castilla y León son
@@ -738,12 +711,15 @@
                         representan gran parte de la inmigración total mientras que los mayores de 66 años representan a
                         una minoria dentro de la inmigración total. </p>
                 </div>
-                <iframe class="iframe" src="https://inm-por-destino-total.netlify.app/" title="inm-por-destino-total"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://inm-por-destino-total.netlify.app/"
+                        title="inm-por-destino-total" width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3 class="section-title">Emigración por destino desde 1990 hasta 2019
                     </h3>
                     <p class="paragraph"><b>Gráfica de líneas con el total de emigraciones de población de Castilla y
@@ -757,8 +733,11 @@
                         que se ha estabilizado la cifra.
                     </p>
                 </div>
-                <iframe class="iframe" src="https://em-por-destino.netlify.app/" title="em-por-destino" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://em-por-destino.netlify.app/" title="em-por-destino" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
             <section class="section2">
@@ -817,7 +796,7 @@
             </section>
 
             <section class="section1">
-                <div style="width: 40%">
+                <div class="block__width--40">
                     <h3>Gráficos de la Emigración por destino y rango de edades desde 2005 hasta 2019</h3>
                     <p class="paragraph">En la mayoria de las gráficas la población mayoritaria que emigra de Castilla y
                         León son personas de entre 19 hasta 40 años. La población que menos emigra son los mayores de 66
@@ -827,8 +806,11 @@
                         reciben menos de 3.5k personas anualmente, estos flujos se han visto reducidos durante los
                         últimos 15 años. </p>
                 </div>
-                <iframe class="iframe" src="https://em-por-comunidad.netlify.app/" title="em-por-comunidad" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://em-por-comunidad.netlify.app/" title="em-por-comunidad"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section2">
@@ -857,7 +839,7 @@
             </section>
 
         </article>
-        <article style="width: 100%">
+        <article class="block__width--100">
             <h2 id="mercado-laboral">MERCADO LABORAL Y OTRAS VARIABLES</h2>
             <section class="section2">
                 <div>
@@ -892,7 +874,7 @@
             </section>
 
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3>Gráficos de la tasa de paro trimestral en % por provincias</h3>
                     <p class="paragraph"> La tasa de paro es la población parada entre la población activa, en el
                         gráfico podemos observar como la tasa de paro es mayor en Zamora, en Ávila y en León. La tasa se
@@ -902,8 +884,11 @@
                         Soria y Burgos. Estas conclusiones pueden verse modificadas en ciertos periodos en concreto ya
                         que la serie es muy fluctuante. </p>
                 </div>
-                <iframe class="iframe" src="https://tasa-paro-trimestral.netlify.app/" title="tasa-paro-trimestral"
-                    width="1000" height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://tasa-paro-trimestral.netlify.app/" title="tasa-paro-trimestral"
+                        width="1000" height="500"></iframe>
+                </div>
             </section>
 
             <section class="section2">
@@ -1088,14 +1073,17 @@
                 </div>
             </section>
             <section class="section1">
-                <div style="width: 50%">
+                <div class="block__width--50">
                     <h3>Miles de euros de cada sector en el PIB de Castilla y León</h3>
                     <p class="paragraph"> Al igual que el número de trabajadores equivalentes a puestos a tiempo
                         completo, las aportaciones en miles de euros al PIB de Castilla y León por sectores también
                         sufrieron caídas debido al covid exceptuando el sector primario y el energético. </p>
                 </div>
-                <iframe class="iframe" src="https://euros-sector.netlify.app/" title="euros-sector" width="1000"
-                    height="500"></iframe>
+                <div class="chart-container">
+
+                    <iframe class="iframe" src="https://euros-sector.netlify.app/" title="euros-sector" width="1000"
+                        height="500"></iframe>
+                </div>
             </section>
 
         </article>
@@ -1145,8 +1133,11 @@
             </section>
             <section class="section2">
                 <h3>Resultados de todos los modelos de predicción y de los modelos Random Forest</h3>
-                <img src="https://drive.google.com/uc?id=1Z0RfT3LJ8HV6bfklrYoKbTa-8sSY-bmv"
-                    alt="Resultados de todos los modelos.">
+                <div class="image-scroll">
+                    <img src="https://drive.google.com/uc?id=1Z0RfT3LJ8HV6bfklrYoKbTa-8sSY-bmv"
+                        alt="Resultados de todos los modelos.">
+
+                </div>
             </section>
             <section class="section2">
                 <div>
